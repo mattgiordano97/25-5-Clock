@@ -1,14 +1,3 @@
-"break-decrement"
-"break-increment"
-"session-increment"
-"session-decrement"
-"break-length"
-"session-length"
-"time-left" // format mm:ss
-"play"
-"pause"
-"reset"
-
 /* Constants and global variables */
 let breakLength = 5;
 let sessionLength = 25;
@@ -118,6 +107,10 @@ $(document).ready(function () {
     });
     // Reset button
     $('#reset').on('click', function () {
+        $('#timer-col').removeClass('border-danger');
+        $('#timer-col').addClass('border-secondary');
+        $('#timer-row').removeClass('text-danger');
+
         clearInterval(timerInterval);
         sessionLength = 25;
         breakLength = 5;
