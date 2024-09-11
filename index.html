@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>25 + 5 Clock</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-dark text-light">
+
+    <div class="container-fluid">
+
+        <!-- Title row -->
+        <div class="row" id="title-row">
+            <div class="col">
+                <h1 class="display-3 text-center">25 + 5 Clock</h1>
+                <hr class="border border-secondary">
+            </div>
+        </div>
+
+        <!-- Options row -->
+        <div class="row text-center" id="options-row">
+            <div class="col" id="break-length-col">
+                <div class="row">
+                    <div id="break-label" class="col"><h2>Break Length</h2></div>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="btn-group" role="group" aria-label="">
+                        <button id="break-increment" type="button" class="btn-change-length btn-change-break btn-increment bg-dark text-light border-0 rounded"><h2><i class="fas fa-arrow-up    "></i></h2></button>
+                        <h2 id="break-length" class="length-val mx-2"></h2>
+                        <button id="break-decrement" type="button" class="btn-change-length btn-change-break btn-decrement bg-dark text-light border-0 rounded"><h2><i class="fas fa-arrow-down    "></i></h2></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="session-length-col">
+                <div class="row">
+                    <div id="session-label" class="col"><h2>Session Length</h2></div>
+                </div>
+                <div class="row justify-content-center">
+                    <button id="session-increment" type="button" class="btn-change-length btn-change-session btn-increment bg-dark text-light border-0 rounded"><h2><i class="fas fa-arrow-up    "></i></h2></button>
+                    <h2 id="session-length" class="length-val mx-2"></h2>
+                    <button id="session-decrement" type="button" class="btn-change-length btn-change-session btn-decrement bg-dark text-light border-0 rounded"><h2><i class="fas fa-arrow-down    "></i></h2></button>
+                    <!-- <div class="border col-2"><button type="button"><i class="fas fa-arrow-up    "></i></button></div>
+                    <div class="border col-2">25</div>
+                    <div class="border col-2"><button type="button"><i class="fas fa-arrow-down    "></i></button></div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Timer row -->
+        <div class="row text-center justify-content-center mb-3" id="timer-row">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 border border-secondary rounded-pill p-3" id="timer-col">
+                <div class="row">
+                    <div class="col"><h1 id="timer-label">Session</h1></div>
+                </div>
+                <div class="row">
+                    <div class="col"><h1 id="time-left" class="display-2"></h1></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls row -->
+         <div class="row text-center justify-content-center" id="controls-row">
+            <div class="btn-group" role="group" aria-label="">
+                <button id="play" type="button" class="btn btn-dark"><i class="lead fas fa-play    "></i></button>
+                <button id="pause" type="button" class="btn btn-dark"><i class="lead fas fa-pause    "></i></button>
+                <button id="reset" type="button" class="btn btn-dark"><i class="lead fas fa-sync    "></i></button>
+            </div>
+         </div>
+
+         <!-- Author row -->
+          <div class="row text-center bg-secondary" id="author">
+            <div class="col">
+                <div class="row">
+                    <div class="col font-italic lead">Designed and coded by</div>
+                </div>
+                <div class="row">
+                    <div class="col font-italic font-weight-bold lead">Matteo</div>
+                </div>
+            </div>
+          </div>
+    </div>
+
+    <audio id="alarm-sound">
+        <source src="C:\Users\ormad\OneDrive\Documents\my_vs_folders\freeCodeCamp projects\3 Frontend Development Libraries\CERT PROJECTS\02 Bootstrap and JQuery\05 25+5 Clock\alarm-clock-short-6402.mp3" type="audio/mpeg">
+    </audio>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
